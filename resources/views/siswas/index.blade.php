@@ -33,6 +33,22 @@
                 <div class="col-4">
                     <a href="{{ route('siswas.create') }}" class="btn btn-success" style="margin: 5px; padding: 5px;">Buat Data Siswa</a>
                 </div>
+                <div class="col">
+                    <form action="{{ route('search')}}" method="get" class="form">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <input type="text" name="search" class="form-control" id="search">
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-primary">Cari</button>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                    </form>
+                </div>
                </div>
 
                 <table class="table table-bordered">

@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 
 Route::resource('siswas', 'App\Http\Controllers\siswaController');
+Route::get('/search', [siswaController::class, 'search'])->name('search');

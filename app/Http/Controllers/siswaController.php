@@ -13,6 +13,13 @@ class siswaController extends Controller
         return view('siswas.index', compact('siswas'))->with('1', (request()->input('page', 1) - 1) * 5);
     }
 
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+        $siswas = siswa::where('nama', 'like', "%" . $keyword . "%")->paginate(5);
+        return view('siswas.index', compact('siswas'))->with('1', (request()->input('page', 1) - 1) * 5);
+    }
+
     public function create()
     {
         return view('siswas.create');
