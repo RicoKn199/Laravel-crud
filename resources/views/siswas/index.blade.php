@@ -29,7 +29,11 @@
         <div class="card" style="margin: 5px; background-color:darkgray">
             <div class="card-body">
                 <h3 style="text-align: center">Data Siswa Sekolah Menengah Kejuruan</h3>
-               <a href="{{ route('siswas.create') }}" class="btn btn-success" style="margin: 5px; padding: 5px;">Buat Data Siswa</a>
+               <div class="row">
+                <div class="col-4">
+                    <a href="{{ route('siswas.create') }}" class="btn btn-success" style="margin: 5px; padding: 5px;">Buat Data Siswa</a>
+                </div>
+               </div>
 
                 <table class="table table-bordered">
                     <thead>
@@ -70,6 +74,9 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="paginate" style="margin-left: 1020px">
+                    {{ $siswas->links('vendor.pagination.custom') }}
+                </div>
             </div>
         </div>
     </div>
